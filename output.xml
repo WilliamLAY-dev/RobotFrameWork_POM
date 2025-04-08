@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-08T12:20:30.240519" rpa="false" schemaversion="5">
+<suite id="s1" name="CheckoutPageTest" source="c:\Users\IB\Desktop\Dev_RobotFrameWork_POM\tests\CheckoutPageTest.robot">
+<test id="s1-t1" name="Checkout" line="10">
+<kw name="Login with valid credentials" owner="LoginPage_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:30.447352" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-08T12:20:30.446980" elapsed="1.938108"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.385466" elapsed="0.035173"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.420914" elapsed="0.020227"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.441721" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.441411" elapsed="0.077399"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.519360" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.519070" elapsed="0.061422"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.581038" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.580753" elapsed="0.076418"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.668641" level="INFO">Current page contains text 'Swag Labs'.</msg>
+<arg>Swag Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.657448" elapsed="0.011591"/>
+</kw>
+<status status="PASS" start="2025-04-08T12:20:30.446383" elapsed="2.222798"/>
+</kw>
+<kw name="Add a product to cart" owner="ProductPage_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADDPRODUCT_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.670044" elapsed="0.016698"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.687307" level="INFO">Clicking element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>${ADDPRODUCT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.687028" elapsed="0.043443"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.740194" level="INFO">Current page contains element 'xpath=/html/body/div/div/div/div[1]/div[1]/div[3]/a/span'.</msg>
+<arg>${NUMBER_SHOPPING_CARD}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.730745" elapsed="0.009680"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.740847" level="INFO">Clicking element 'xpath=/html/body/div/div/div/div[1]/div[1]/div[3]/a'.</msg>
+<arg>${CART_LOGO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.740611" elapsed="0.046198"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.794342" level="INFO">Current page contains element 'id=cart_contents_container'.</msg>
+<arg>${CART_CONTAINER}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.787070" elapsed="0.007495"/>
+</kw>
+<status status="PASS" start="2025-04-08T12:20:32.669656" elapsed="0.125032"/>
+</kw>
+<kw name="Finaliser la commande" owner="CheckoutPage_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHECKOUT_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.795485" elapsed="0.011820"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.807797" level="INFO">Clicking element 'id=checkout'.</msg>
+<arg>${CHECKOUT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.807547" elapsed="0.054289"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.862383" level="INFO">Typing text 'William' into text field 'id=first-name'.</msg>
+<arg>${FIRST_NAME_FIELD}</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.862108" elapsed="0.063075"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.925727" level="INFO">Typing text 'LAY' into text field 'id=last-name'.</msg>
+<arg>${LAST_NAME_FIELD}</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.925446" elapsed="0.049664"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:32.975638" level="INFO">Typing text '77127' into text field 'id=postal-code'.</msg>
+<arg>${POSTAL_CODE_FIELD}</arg>
+<arg>${POSTAL_CODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:32.975360" elapsed="0.049899"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:33.025777" level="INFO">Clicking element 'id=continue'.</msg>
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:33.025517" elapsed="0.048795"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FINISH_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-08T12:20:33.074589" elapsed="0.012052"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:33.087127" level="INFO">Clicking element 'id=finish'.</msg>
+<arg>${FINISH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:33.086888" elapsed="0.037303"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BACKHOME_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-08T12:20:33.124447" elapsed="0.013602"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:33.147188" level="INFO">Current page contains element 'xpath=/html/body/div/div/div/div[2]/h2'.</msg>
+<arg>${VALIDATION_MESSAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-08T12:20:33.138325" elapsed="0.009084"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:33.147825" level="INFO">Clicking element 'id=back-to-products'.</msg>
+<arg>${BACKHOME_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T12:20:33.147585" elapsed="0.038555"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-08T12:20:33.193056" level="INFO">Current page contains text 'Swag Labs'.</msg>
+<arg>Swag Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-08T12:20:33.186549" elapsed="0.006709"/>
+</kw>
+<status status="PASS" start="2025-04-08T12:20:32.795164" elapsed="0.398207"/>
+</kw>
+<status status="PASS" start="2025-04-08T12:20:30.445680" elapsed="2.748067"/>
+</test>
+<status status="PASS" start="2025-04-08T12:20:30.244255" elapsed="2.950139"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="CheckoutPageTest" id="s1" pass="1" fail="0" skip="0">CheckoutPageTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
