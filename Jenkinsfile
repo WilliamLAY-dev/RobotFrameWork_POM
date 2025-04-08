@@ -45,9 +45,7 @@ pipeline {
                 script {
                     def ExportResponse = bat(
                         script: """
-                            curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer ${XRAY_TOKEN}"  --data @"output.xml" https://xray.cloud.getxray.app/api/v2/import/execution/robot?projectKey=POEI252
-
-
+                            curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer ${XRAY_TOKEN}"  --data @"output.xml" https://xray.cloud.getxray.app/api/v2/import/execution/robot?projectKey=POEI20252
                         """,
                         returnStdout: true
                     ).trim()

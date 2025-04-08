@@ -6,6 +6,6 @@ Resource    ../keywords/LoginPage_keywords.robot
 
 *** Test Cases ***
 
-Logins
+Logins 
     Login with valid credentials
     Login with invalid credentials
