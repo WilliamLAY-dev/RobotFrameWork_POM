@@ -8,6 +8,7 @@ Resource    ../keywords/ProductPage_keywords.robot
 
 *** Test Cases ***
 Checkout
+    [Tags]    POEI20252-785
     Login with valid credentials
     Add a product to cart
     Finaliser la commande
